@@ -1,4 +1,4 @@
-from validator import validate_event
+from src.validator import validate_event
 
 def process_event(event_name):
     print("Processing started")
