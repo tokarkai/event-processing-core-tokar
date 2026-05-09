@@ -65,3 +65,19 @@ jobs:
         run: |
           echo "Running smoke test..."
           python3 -c "assert 1 == 1"
+
+  deploy_production:
+    needs: verify_staging
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifact
+
+      - name: Deploy to production
+        run: |
+          echo "Deploying to PRODUCTION..."
+          cat build.txt
