@@ -2,6 +2,7 @@ from validator import validate_event
 
 def process_event(event_name):
 <<<<<<< HEAD
+<<<<<<< HEAD
     return "MAIN VERSION OF PROCESS"
     print("Processing started")
     event_name = event_name.strip()
