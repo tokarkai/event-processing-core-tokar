@@ -14,3 +14,6 @@ def process_event(event_name):
 
 def log_event(event):
     print("LOG:", event)
+
+def log_error(error):
+    print("ERROR:", error)
