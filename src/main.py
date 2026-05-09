@@ -7,7 +7,7 @@ def process_event(event_name):
     if not validate_event(event_name):
         return "Invalid event"
 
-    return f"Processed: {event_name.upper()}"   
+    return f"Processed: {event_name.lower()}"   
 
 def log_event(event):
     print("LOG:", event)
