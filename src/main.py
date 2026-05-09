@@ -12,8 +12,5 @@ def process_event(event_name):
 
     return f"Processed: {event_name.upper()}"
 
-def log_event(event_name):
-    print(f"LOG: {event_name}")
-
-def log_error(error):
-    print(f"ERROR: {error}")
+def log_event(event):
+    print("LOG:", event)
