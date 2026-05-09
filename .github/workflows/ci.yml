@@ -40,3 +40,18 @@ jobs:
         with:
           name: build-artifact
           path: build.txt
+
+  deploy_staging:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifact
+
+      - name: Deploy to staging
+        run: |
+          echo "Deploying to staging..."
+          cat build.txt
