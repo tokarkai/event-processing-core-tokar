@@ -12,3 +12,6 @@ def process_event(event_name):
 
 def log_event(event_name):
     print(f"LOG: {event_name}")
+
+def log_error(error):
+    print(f"ERROR: {error}")
